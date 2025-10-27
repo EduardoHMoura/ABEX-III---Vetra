@@ -162,8 +162,6 @@ Validar as ideias por meio de representações visuais, simulando o uso real do 
 
 ### 🖼️ Protótipo de Interface (Wireframe de Alta Fidelidade)
 
-![Protótipo VETRA](./2025-10-26_20-59.png)
-
 **Descrição:**  
 O protótipo apresenta a interface principal do aplicativo **VETRA**, destacando:
 - Visualização detalhada da ficha de cada animal (foto, peso, raça, vacinas e reprodução).  
