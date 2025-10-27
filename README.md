@@ -1,6 +1,4 @@
-# ABEX-III---Vetra
-ABEX III - Vetra
-ABEX III - Vetra# 🐮 VETRA — Sistema de Gestão Pecuária Digital
+# 🐮 VETRA — Sistema de Gestão Pecuária Digital
 
 ## 2.1 Imersão & Empatia
 
@@ -143,177 +141,70 @@ Compreender os desafios enfrentados por produtores rurais, veterinários e agroi
 
 ---
 
-### 💬 Insight-Solução
-
-> Produtores precisam de **confiança, simplicidade e segurança** para adotar ferramentas digitais.  
-> O **VETRA** surge como um **sistema híbrido**, acessível e prático, que transforma a **gestão manual em uma experiência moderna, integrada e confiável**, fortalecendo a competitividade do produtor rural.
-
----
-# 🐮 VETRA — Sistema de Gestão Pecuária Digital
-
 ## 2.4 Prototipação
 
 ### 🎯 Objetivo
-Transformar os insights e ideias em **representações visuais e conceituais** que validem a proposta de valor do VETRA, permitindo simular seu uso antes do desenvolvimento final.
+Validar as ideias por meio de representações visuais, simulando o uso real do sistema para garantir que a solução proposta atenda às necessidades identificadas.
 
 ---
 
 ### 🧱 Modelos Conceituais
 
-#### 📘 Diagrama de Casos de Uso (UML)
-
-**Ator principal:** Produtor  
-**Atores secundários:** Veterinário, Órgão Regulador, Sistema de Armazenamento (Nuvem)
-
-**Casos de uso principais:**
+#### 📘 Casos de Uso Principais
 - Cadastrar Animal  
-- Consultar Histórico de Animal  
-- Registrar Vacinação  
+- Registrar Vacinação e Reprodução  
+- Consultar Histórico do Animal  
 - Gerar Relatórios de Desempenho  
-- Sincronizar Dados com a Nuvem  
-- Enviar Informações a Órgãos Reguladores  
-
-**Descrição geral:**  
-O produtor realiza o cadastro e acompanhamento dos animais de sua criação. O sistema armazena as informações localmente e, quando há conexão com a internet, sincroniza automaticamente com a nuvem. O veterinário pode inserir dados de vacinação e sanidade, e os relatórios são gerados para acompanhamento e envio aos órgãos competentes.
+- Sincronizar Dados (Offline/Online)  
+- Notificar Eventos Importantes  
 
 ---
 
-#### 📗 Diagrama de Atividades (Fluxo de Uso)
+### 🖼️ Protótipo de Interface (Wireframe de Alta Fidelidade)
 
-1. **Início do Sistema**  
-2. **Login ou Acesso Local (Offline)**  
-3. **Tela Principal (Painel do Criador)**  
-4. **Seleção de Função:**  
-   - Cadastrar Novo Animal  
-   - Registrar Evento (vacina, parto, venda)  
-   - Consultar Histórico  
-   - Gerar Relatório  
-5. **Salvar Dados (Localmente)**  
-6. **Sincronizar com a Nuvem (quando online)**  
-7. **Encerrar Sessão**
+![Protótipo VETRA](./2025-10-26_20-59.png)
 
-📈 *O fluxo evidencia o uso contínuo, mesmo sem internet, garantindo acessibilidade e praticidade.*
+**Descrição:**  
+O protótipo apresenta a interface principal do aplicativo **VETRA**, destacando:
+- Visualização detalhada da ficha de cada animal (foto, peso, raça, vacinas e reprodução).  
+- Funcionalidades de **anotação, registro por voz e imagem**, facilitando o uso em campo.  
+- Área de **ações automáticas** que alerta o produtor sobre eventos futuros, como partos e vacinas.  
+- Design simples, intuitivo e funcional, pensado para operação mesmo em ambientes rurais.  
 
 ---
 
-### 📱 Protótipos Visuais
+### 🧮 Modelo Lógico Simplificado
 
-#### 🖼️ Wireframes Principais
+**Tabelas principais:**  
+- `PRODUTOR(id_produtor, nome, cpf, telefone, endereco)`  
+- `ANIMAL(id_animal, id_produtor, nome, especie, nascimento, peso_atual, status)`  
+- `EVENTO_SANITARIO(id_evento, id_animal, tipo_evento, data_evento, observacoes)`  
+- `SINCRONIZACAO(id_sync, id_produtor, data_sync, status)`  
 
-1. **Tela Inicial / Login**
-   - Opção de login ou modo offline.
-   - Logotipo VETRA e mensagem de boas-vindas.
-   - Acesso rápido ao “Painel do Criador”.
-
-2. **Painel do Criador**
-   - Exibição dos animais cadastrados (nome, raça, idade).
-   - Botão **“+ Novo Registro”**.
-   - Indicadores de desempenho e status de sincronização.
-
-3. **Cadastro de Animal**
-   - Campos: Identificação, nascimento, raça, peso, histórico de saúde.
-   - Botão de anexar foto.
-   - Opção de salvar localmente ou enviar à nuvem.
-
-4. **Relatórios**
-   - Gráficos de produtividade (ganho de peso, taxa de natalidade, mortalidade).
-   - Exportação em PDF/Excel.
-   - Filtros por data e categoria.
-
-5. **Notificações e Alertas**
-   - Lembretes de vacinação e vencimento de documentos.
-   - Alertas de sincronização pendente.
-   - Mensagens automáticas de conformidade sanitária.
-
-💡 *O design prioriza contraste, legibilidade e navegação simples, adaptado a usuários com diferentes níveis de familiaridade tecnológica.*
+💾 *Estrutura híbrida (local + nuvem) que assegura acesso contínuo e segurança dos dados.*
 
 ---
 
-### 🧩 Blueprint de Serviço
+### 🚀 MVP Inicial
 
-| Etapa | Ação do Usuário | Ação do Sistema | Suporte / Backstage |
-|--------|------------------|------------------|----------------------|
-| 1. Acesso ao App | Abre o app e realiza login | Valida credenciais ou ativa modo offline | Banco local disponível |
-| 2. Cadastro de Animal | Preenche dados e salva | Armazena informações localmente | Sincroniza com servidor em nuvem |
-| 3. Registro de Eventos | Registra vacina ou parto | Atualiza histórico do animal | Envia notificação ao veterinário |
-| 4. Consulta de Relatórios | Solicita dados e gráficos | Gera relatório com métricas | Atualiza indicadores no painel |
-| 5. Sincronização | Conecta à internet | Envia dados ao servidor | Backup automático e validação |
+**Funcionalidades:**
+- Cadastro e histórico de animais  
+- Registro de eventos (vacinas, partos, vendas)  
+- Sincronização automática  
+- Alertas e notificações inteligentes  
 
----
-
-### 🧮 Modelo Lógico (Banco de Dados Simplificado)
-
-#### Tabelas Principais
-
-**1. PRODUTOR**
-| Campo | Tipo | Descrição |
-|--------|------|-----------|
-| id_produtor | INT | Identificador único |
-| nome | VARCHAR(100) | Nome completo |
-| cpf | VARCHAR(15) | CPF do produtor |
-| telefone | VARCHAR(20) | Contato |
-| endereco | VARCHAR(200) | Localização da fazenda |
-
-**2. ANIMAL**
-| Campo | Tipo | Descrição |
-|--------|------|-----------|
-| id_animal | INT | Identificador único |
-| id_produtor | INT | FK → PRODUTOR |
-| nome | VARCHAR(50) | Nome ou identificação |
-| especie | VARCHAR(50) | Bovino, Suíno etc. |
-| nascimento | DATE | Data de nascimento |
-| peso_atual | DECIMAL(6,2) | Peso em kg |
-| status | VARCHAR(20) | Ativo, vendido, falecido |
-
-**3. EVENTO_SANITARIO**
-| Campo | Tipo | Descrição |
-|--------|------|-----------|
-| id_evento | INT | Identificador |
-| id_animal | INT | FK → ANIMAL |
-| tipo_evento | VARCHAR(50) | Vacina, exame, parto |
-| data_evento | DATE | Data da ocorrência |
-| observacoes | TEXT | Detalhes adicionais |
-
-**4. SINCRONIZACAO**
-| Campo | Tipo | Descrição |
-|--------|------|-----------|
-| id_sync | INT | Identificador |
-| id_produtor | INT | FK → PRODUTOR |
-| data_sync | DATETIME | Data e hora da sincronização |
-| status | VARCHAR(10) | Pendente / Concluída |
-
-💾 *Esse modelo garante segurança e integridade dos dados, permitindo operação híbrida (offline + online).*
-
----
-
-### 🧠 Proposta de MVP (Produto Mínimo Viável)
-
-**Funcionalidades iniciais:**
-- Cadastro de animais e controle de eventos sanitários.  
-- Armazenamento local com sincronização em nuvem.  
-- Painel simplificado com métricas de desempenho.  
-- Interface amigável e responsiva.  
-
-**Testes previstos:**
-- Validação com pequenos produtores locais.  
-- Coleta de feedback sobre usabilidade e clareza das telas.  
-- Ajustes de interface e performance para versão beta.  
-
----
-
-### 🚀 Próximos Passos
-
-1. Finalizar o protótipo navegável (Figma).  
-2. Testar em campo com 3 propriedades parceiras.  
-3. Integrar módulo de relatórios inteligentes.  
-4. Iniciar documentação técnica e plano de negócio.  
+**Próximos passos:**
+1. Testes pilotos em fazendas parceiras.  
+2. Validação com técnicos e produtores.  
+3. Ajustes de interface e relatórios.  
+4. Planejamento de integração com órgãos fiscalizadores.  
 
 ---
 
 ### 💬 Conclusão
 
-O **VETRA** representa a **modernização da gestão pecuária**, promovendo uma **transição segura e gradual do papel para o digital**.  
-Com foco em **simplicidade, confiança e integração**, a solução contribui para a **sustentabilidade, rastreabilidade e competitividade** dos pequenos e médios produtores rurais.
+O **VETRA** é uma solução digital projetada para **substituir os registros manuais** por uma gestão inteligente, segura e acessível.  
+Focado em **simplicidade, confiança e conectividade**, o sistema promove a **profissionalização e competitividade** dos pequenos e médios produtores rurais.
 
 ---
 
