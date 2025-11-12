@@ -199,12 +199,6 @@ O protótipo apresenta a interface principal do aplicativo **VETRA**, destacando
 
 ---
 
-### 💬 Conclusão
-
-O **VETRA** é uma solução digital projetada para **substituir os registros manuais** por uma gestão inteligente, segura e acessível.  
-Focado em **simplicidade, confiança e conectividade**, o sistema promove a **profissionalização e competitividade** dos pequenos e médios produtores rurais.
-# 🐮 Sistema de Gestão Pecuária Digital
-
 ## 📘 Requisitos Funcionais (RF)
 
 | Código | Descrição |
@@ -333,15 +327,11 @@ Focado em **simplicidade, confiança e conectividade**, o sistema promove a **pr
 
 ---
 
-📎 **Dica:**  
-Você pode adicionar um **Sumário Automático (Table of Contents)** no início com:
-```markdown
-## 🗂️ Sumário
-- [Requisitos Funcionais](#-requisitos-funcionais-rf)
-- [Requisitos Não Funcionais](#️-requisitos-não-funcionais-rnf)
-- [Histórias de Usuário](#-histórias-de-usuário)
-- [Regras de Negócio](#-regras-de-negócio-rn)
+### 💬 Conclusão
 
+O **VETRA** é uma solução digital projetada para **substituir os registros manuais** por uma gestão inteligente, segura e acessível.  
+Focado em **simplicidade, confiança e conectividade**, o sistema promove a **profissionalização e competitividade** dos pequenos e médios produtores rurais.
+# 🐮 Sistema de Gestão Pecuária Digital
 ---
 
 📘 **Resumo Geral**
