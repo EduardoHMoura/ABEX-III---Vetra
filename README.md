@@ -337,4 +337,4 @@ Focado em **simplicidade, confiança e conectividade**, o sistema promove a **pr
 > “Transformar o controle burocrático de animais em uma gestão estratégica de informações do rebanho — simples, confiável e acessível.”
 
 ---
-![Teste](docs/diagramas/Diagrama de Atividades - Cadastro de Animal.png)
+![ Cadastro de Animal.png](docs/diagramas/Diagrama de Atividades - Cadastro de Animal.png)
