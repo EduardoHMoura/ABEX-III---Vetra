@@ -203,6 +203,144 @@ O protótipo apresenta a interface principal do aplicativo **VETRA**, destacando
 
 O **VETRA** é uma solução digital projetada para **substituir os registros manuais** por uma gestão inteligente, segura e acessível.  
 Focado em **simplicidade, confiança e conectividade**, o sistema promove a **profissionalização e competitividade** dos pequenos e médios produtores rurais.
+# 🐮 Sistema de Gestão Pecuária Digital
+
+## 📘 Requisitos Funcionais (RF)
+
+| Código | Descrição |
+|:-------|:-----------|
+| **RF01 - Gestão de Produtores** |  |
+| RF01.01 | Cadastrar produtor rural |
+| RF01.02 | Editar dados do produtor |
+| RF01.03 | Inativar produtor |
+| **RF02 - Gestão de Animais** |  |
+| RF02.01 | Cadastrar animal com dados completos |
+| RF02.02 | Editar informações do animal |
+| RF02.03 | Consultar ficha completa do animal |
+| RF02.04 | Upload de fotos do animal |
+| RF02.05 | Registro por voz de observações |
+| RF02.06 | Inativar/baixar animal (venda, morte) |
+| **RF03 - Controle Sanitário** |  |
+| RF03.01 | Registrar vacinação |
+| RF03.02 | Registrar tratamentos médicos |
+| RF03.03 | Registrar doenças |
+| RF03.04 | Consultar histórico sanitário |
+| RF03.05 | Agendar próximas vacinas |
+| **RF04 - Controle Reprodutivo** |  |
+| RF04.01 | Registrar cobertura/monta |
+| RF04.02 | Registrar diagnóstico de gestação |
+| RF04.03 | Registrar parto |
+| RF04.04 | Registrar nascimento de bezerros |
+| RF04.05 | Consultar histórico reprodutivo |
+| **RF05 - Gestão de Vendas** |  |
+| RF05.01 | Registrar venda de animal |
+| RF05.02 | Gerar comprovante de venda |
+| RF05.03 | Consultar histórico de vendas |
+| **RF06 - Relatórios e Análises** |  |
+| RF06.01 | Gerar relatório de produção |
+| RF06.02 | Gerar relatório sanitário |
+| RF06.03 | Gerar relatório reprodutivo |
+| RF06.04 | Exportar relatórios em PDF |
+| RF06.05 | Comparar métricas com benchmarks |
+| **RF07 - Sincronização de Dados** |  |
+| RF07.01 | Operar em modo offline |
+| RF07.02 | Sincronizar dados com nuvem |
+| RF07.03 | Resolver conflitos de sincronização |
+| RF07.04 | Backup automático de dados |
+| **RF08 - Alertas e Notificações** |  |
+| RF08.01 | Alertas de vacinas pendentes |
+| RF08.02 | Notificações de partos previstos |
+| RF08.03 | Lembretes de eventos programados |
+| **RF09 - Integração com Órgãos** |  |
+| RF09.01 | Emitir certificados sanitários |
+| RF09.02 | Exportar dados para fiscalização |
+| RF09.03 | Integração com sistemas governamentais |
+
+---
+
+## ⚙️ Requisitos Não Funcionais (RNF)
+
+| Código | Descrição |
+|:-------|:-----------|
+| **RNF01 - Usabilidade** |  |
+| RNF01.01 | Interface intuitiva para usuários com baixa familiaridade digital |
+| RNF01.02 | Tempo de aprendizado menor que 30 minutos |
+| RNF01.03 | Navegação com no máximo 3 cliques para funções principais |
+| **RNF02 - Desempenho** |  |
+| RNF02.01 | Tempo de resposta inferior a 2 segundos |
+| RNF02.02 | Suporte a até 10.000 animais por produtor |
+| RNF02.03 | Sincronização em background sem impactar uso |
+| **RNF03 - Confiabilidade** |  |
+| RNF03.01 | Disponibilidade de 99% (considerando modo offline) |
+| RNF03.02 | Backup automático a cada 24h |
+| RNF03.03 | Recuperação de dados em caso de falha |
+| **RNF04 - Segurança** |  |
+| RNF04.01 | Autenticação do usuário |
+| RNF04.02 | Criptografia de dados sensíveis |
+| RNF04.03 | Controle de acesso por perfil |
+| **RNF05 - Compatibilidade** |  |
+| RNF05.01 | Funcionamento em Android e iOS |
+| RNF05.02 | Compatibilidade com versões antigas de SO |
+| RNF05.03 | Funcionamento em tablets e smartphones |
+| **RNF06 - Conectividade** |  |
+| RNF06.01 | Operação 100% offline |
+| RNF06.02 | Sincronização com pouca conectividade |
+| RNF06.03 | Consumo mínimo de dados |
+
+---
+
+## 👤 Histórias de Usuário
+
+| Épico | História | Como... | Quero... | Para... | Critérios de Aceite |
+|:------|:----------|:--------|:---------|:---------|:--------------------|
+| **Gestão de Animais** | HU01 | Produtor rural | Cadastrar um novo animal com foto e dados básicos | Ter controle completo do meu rebanho | - Funcionar offline<br>- Upload de foto<br>- ID único automático<br>- Validação de dados |
+|  | HU02 | Produtor | Consultar ficha completa de um animal | Tomar decisões sobre manejo e vendas | - Mostrar histórico completo<br>- Incluir fotos e observações<br>- Carregar em menos de 3 segundos |
+| **Controle Sanitário** | HU03 | Veterinário | Registrar vacinação aplicada | Manter o controle sanitário atualizado | - Registrar lote e data<br>- Agendar próxima dose automaticamente<br>- Gerar alerta para o produtor |
+|  | HU04 | Produtor | Receber alertas de vacinas pendentes | Não esquecer dos cuidados com o rebanho | - Alerta 7 dias antes<br>- Funcionar offline<br>- Marcar como realizado |
+| **Relatórios** | HU05 | Técnico agrícola | Gerar relatórios de produtividade | Orientar o produtor com base em dados | - Métricas de desempenho<br>- Exportar em PDF<br>- Comparar com médias de mercado |
+| **Sincronização** | HU06 | Produtor rural | Usar o sistema sem internet | Trabalhar normalmente no campo | - Funções offline<br>- Sincronização automática<br>- Indicar status de sincronização |
+
+---
+
+## 🧩 Regras de Negócio (RN)
+
+| Código | Descrição |
+|:-------|:-----------|
+| **RN01 - Gestão de Animais** |  |
+| RN01.01 | Todo animal deve ter um ID único gerado automaticamente |
+| RN01.02 | O status do animal deve ser: *Ativo*, *Vendido*, *Morto* ou *Abatido* |
+| RN01.03 | Animais inativos não podem ter novos eventos registrados |
+| **RN02 - Controle Sanitário** |  |
+| RN02.01 | Vacinas obrigatórias por lei devem gerar alertas especiais |
+| RN02.02 | O prazo para próxima vacina deve ser calculado com base no tipo de vacina |
+| RN02.03 | Eventos sanitários não podem ser registrados com data futura |
+| **RN03 - Controle Reprodutivo** |  |
+| RN03.01 | A data prevista do parto deve ser calculada como 285 dias após a cobertura |
+| RN03.02 | Bezerros nascidos devem ser automaticamente cadastrados como novos animais |
+| RN03.03 | Deve ser mantido o vínculo genético entre pais e filhos |
+| **RN04 - Sincronização** |  |
+| RN04.01 | Dados criados offline devem ser marcados como “pendentes de sincronização” |
+| RN04.02 | Em caso de conflito, a versão mais recente prevalece |
+| RN04.03 | A sincronização deve ocorrer automaticamente quando detectada conexão |
+| **RN05 - Segurança e Acesso** |  |
+| RN05.01 | Apenas o produtor proprietário pode excluir animais |
+| RN05.02 | Veterinários podem apenas adicionar eventos sanitários |
+| RN05.03 | Dados sensíveis devem ser criptografados localmente |
+| **RN06 - Negócio** |  |
+| RN06.01 | O sistema deve estar disponível em português com termos do agronegócio |
+| RN06.02 | Deve seguir as normas do Ministério da Agricultura para rastreabilidade |
+| RN06.03 | Relatórios para órgãos fiscais devem seguir formato padrão |
+
+---
+
+📎 **Dica:**  
+Você pode adicionar um **Sumário Automático (Table of Contents)** no início com:
+```markdown
+## 🗂️ Sumário
+- [Requisitos Funcionais](#-requisitos-funcionais-rf)
+- [Requisitos Não Funcionais](#️-requisitos-não-funcionais-rnf)
+- [Histórias de Usuário](#-histórias-de-usuário)
+- [Regras de Negócio](#-regras-de-negócio-rn)
 
 ---
 
