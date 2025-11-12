@@ -337,6 +337,89 @@ Focado em **simplicidade, confiança e conectividade**, o sistema promove a **pr
 > “Transformar o controle burocrático de animais em uma gestão estratégica de informações do rebanho — simples, confiável e acessível.”
 
 ---
-![Diagrama de Atividades - Cadastro de Animal](docs/diagramas/Diagrama_Atividades_Cadastro_Animal.png)
+## 📊 Diagramas UML
+
+Esta seção apresenta os principais diagramas desenvolvidos no projeto **VETRA**, organizados por tipo e funcionalidade do sistema.
+
+---
+
+### 🧩 **Diagramas de Casos de Uso**
+
+<p align="center">
+  <img src="docs/diagramas/Diagrama%20de%20Casos%20de%20Uso%20Detalhado%20-%20Gestão%20de%20Animais.png" width="700"><br>
+  <em>Figura 1 — Caso de Uso: Gestão de Animais</em>
+</p>
+
+<p align="center">
+  <img src="docs/diagramas/Diagrama%20de%20Casos%20de%20Uso%20Detalhado%20-%20Controle%20Sanitário.png" width="700"><br>
+  <em>Figura 2 — Caso de Uso: Controle Sanitário</em>
+</p>
+
+<p align="center">
+  <img src="docs/diagramas/Diagrama%20de%20Casos%20de%20Uso%20Detalhado%20-%20Reprodução.png" width="700"><br>
+  <em>Figura 3 — Caso de Uso: Reprodução</em>
+</p>
+
+<p align="center">
+  <img src="docs/diagramas/Diagrama%20de%20Casos%20de%20Uso%20Detalhado%20-%20Sincronização%20e%20Configuração.png" width="700"><br>
+  <em>Figura 4 — Caso de Uso: Sincronização e Configuração</em>
+</p>
+
+---
+
+### ⚙️ **Diagramas de Atividades**
+
+<p align="center">
+  <img src="docs/diagramas/Diagrama_Atividades_Cadastro_Animal.png" width="700"><br>
+  <em>Figura 5 — Atividade: Cadastro de Animal</em>
+</p>
+
+<p align="center">
+  <img src="docs/diagramas/Diagrama%20de%20Atividades%20-%20Registro%20de%20Vacinação.png" width="700"><br>
+  <em>Figura 6 — Atividade: Registro de Vacinação</em>
+</p>
+
+<p align="center">
+  <img src="docs/diagramas/Diagrama%20de%20Atividades%20-%20Processo%20de%20Sincronização.png" width="700"><br>
+  <em>Figura 7 — Atividade: Processo de Sincronização</em>
+</p>
+
+---
+
+### 🔁 **Diagramas de Sequência**
+
+<p align="center">
+  <img src="docs/diagramas/Diagrama%20de%20Sequência%20-%20Cadastro%20de%20Animal.png" width="700"><br>
+  <em>Figura 8 — Sequência: Cadastro de Animal</em>
+</p>
+
+<p align="center">
+  <img src="docs/diagramas/Diagrama%20de%20Sequência%20-%20Registro%20de%20Vacinação.png" width="700"><br>
+  <em>Figura 9 — Sequência: Registro de Vacinação</em>
+</p>
+
+<p align="center">
+  <img src="docs/diagramas/Diagrama%20de%20Sequência%20-%20Geração%20de%20Relatório.png" width="700"><br>
+  <em>Figura 10 — Sequência: Geração de Relatório</em>
+</p>
+
+---
+
+### 🧱 **Diagrama de Classes**
+
+<p align="center">
+  <img src="docs/diagramas/Diagrama%20de%20Classes%20-%20Vetra.png" width="700"><br>
+  <em>Figura 11 — Diagrama de Classes: Estrutura Geral do Sistema</em>
+</p>
+
+---
+
+### 🖥️ **Protótipo Principal**
+
+<p align="center">
+  <img src="docs/diagramas/casoprincipal.png" width="700"><br>
+  <em>Figura 12 — Tela principal do sistema VETRA</em>
+</p>
+
 
 
