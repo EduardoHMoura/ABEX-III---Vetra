@@ -331,7 +331,6 @@ O protótipo apresenta a interface principal do aplicativo **VETRA**, destacando
 
 O **VETRA** é uma solução digital projetada para **substituir os registros manuais** por uma gestão inteligente, segura e acessível.  
 Focado em **simplicidade, confiança e conectividade**, o sistema promove a **profissionalização e competitividade** dos pequenos e médios produtores rurais.
-# 🐮 Sistema de Gestão Pecuária Digital
 ---
 
 📘 **Resumo Geral**
