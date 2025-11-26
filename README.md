@@ -421,5 +421,177 @@ Esta seção apresenta os principais diagramas desenvolvidos no projeto **VETRA*
   <em>Figura 12 — Tela principal do sistema VETRA</em>
 </p>
 
+---
+# 📊 Estimativa de Custos - Projeto VETRA
+
+## 📋 Resumo Executivo
+
+| Item | Valor | Observações |
+|------|-------|-------------|
+| **Use Case Points (UCP)** | 198.8 | Complexidade média-alta |
+| **Horas Totais Estimadas** | 3.976 horas | Base: 20h por UCP |
+| **Custo Total Desenvolvimento** | R$ 182.736,00 | |
+| **Custo Total com Margem** | R$ 252.175,68 | Inclui 20% margem |
+| **Prazo Estimado** | 9 meses | Equipe de 3 desenvolvedores |
+| **Equipe Recomendada** | 3 desenvolvedores | |
+
+---
+
+## 🔢 Detalhamento dos Cálculos
+
+### Passo 1: Cálculo do UAW (Unadjusted Actor Weight)
+
+| Tipo de Ator | Descrição | Peso | N. de Atores | Resultado |
+|-------------|-----------|------|--------------|-----------|
+| Ator Simples | Sistema de órgãos fiscalizadores | 1 | 1 | 1 |
+| Ator Médio | Sistema de backup em nuvem | 2 | 1 | 2 |
+| Ator Complexo | Produtor rural | 3 | 1 | 3 |
+| Ator Complexo | Veterinário | 3 | 1 | 3 |
+| Ator Complexo | Técnico agrícola | 3 | 1 | 3 |
+| **Total UAW** | | | | **12** |
+
+### Passo 2: Cálculo do UUCW (Unadjusted Use Case Weight)
+
+| Tipo | Descrição | Peso | N. de Casos de Uso | Resultado |
+|------|-----------|------|-------------------|-----------|
+| Simples | Upload foto, Registro por voz, Consultar dados básicos | 5 | 8 | 40 |
+| Médio | Cadastro animal, Registro vacinação, Relatórios simples | 10 | 12 | 120 |
+| Complexo | Sincronização, Análises comparativas, Integração governamental | 15 | 6 | 90 |
+| **Total UUCW** | | | | **250** |
+
+### Passo 3: Cálculo do UUCP (Unadjusted Use Case Points)
+
+UUCP = UAW + UUCW = 12 + 250 = 262
 
 
+### Passo 4: Cálculo do Tfactor (Technical Complexity Factor)
+
+| Fator | Requisito | Peso | Influência (0-5) | Resultado |
+|-------|-----------|------|------------------|-----------|
+| T1 | Sistema distribuído (nuvem + local) | 2 | 5 | 10 |
+| T2 | Tempo de resposta (< 2 segundos) | 2 | 4 | 8 |
+| T3 | Eficiência (10.000 animais) | 1 | 4 | 4 |
+| T4 | Processamento complexo (análises) | 1 | 3 | 3 |
+| T5 | Código reusável | 1 | 3 | 3 |
+| T6 | Facilidade de instalação | 0.5 | 4 | 2 |
+| T7 | Facilidade de uso (interface simples) | 0.5 | 5 | 2.5 |
+| T8 | Portabilidade (Android/iOS) | 2 | 5 | 10 |
+| T9 | Facilidade de mudança | 1 | 3 | 3 |
+| T10 | Concorrência (múltiplos usuários) | 1 | 3 | 3 |
+| T11 | Segurança (criptografia) | 1 | 4 | 4 |
+| T12 | Acessível por terceiros (API) | 1 | 3 | 3 |
+| T13 | Treinamento especial (usuários rurais) | 1 | 4 | 4 |
+| **Total Tfactor** | | | | **59.5** |
+
+### Passo 5: Cálculo do TCF (Technical Complexity Factor)
+
+TCF = 0.6 + (0.01 × Tfactor) = 0.6 + (0.01 × 59.5) = 1.195
+
+
+### Passo 6: Cálculo do Efactor (Environmental Complexity Factor)
+
+| Fator | Requisito | Peso | Influência (0-5) | Resultado |
+|-------|-----------|------|------------------|-----------|
+| E1 | Familiaridade processo formal | 1.5 | 3 | 4.5 |
+| E2 | Experiência com aplicação similar | 0.5 | 2 | 1 |
+| E3 | Experiência em OO | 1 | 4 | 4 |
+| E4 | Analista experiente | 0.5 | 4 | 2 |
+| E5 | Motivação | 1 | 4 | 4 |
+| E6 | Requisitos estáveis | 2 | 3 | 6 |
+| E7 | Desenvolvedores meio-expediente | -1 | 0 | 0 |
+| E8 | Linguagem difícil | 2 | 2 | 4 |
+| **Total Efactor** | | | | **25.5** |
+
+### Passo 7: Cálculo do ECF (Environmental Complexity Factor)
+
+ECF = 1.4 + (-0.03 × Efactor) = 1.4 + (-0.03 × 25.5) = 0.635
+
+
+### Passo 8: Cálculo dos UCP (Use Case Points)
+
+
+---
+
+## 💰 Estimativa de Custos
+
+### Horas de Trabalho
+- **UCP**: 198.8
+- **Média de horas por UCP**: 20 horas
+- **Total de horas**: 198.8 × 20 = 3.976 horas
+
+### Custos de Desenvolvimento
+
+| Item | Valor | Detalhes |
+|------|-------|----------|
+| **Custo Hora Analista** | R$ 52,00 | [Fonte: Salario.com.br](https://www.salario.com.br/profissao/analista-de-sistemas-informatica-cbo-212405/) |
+| **Custo Hora Programador** | R$ 40,00 | [Fonte: Salario.com.br](https://www.salario.com.br/profissao/programador-de-sistemas-de-informacao-cbo-317110/) |
+| **Média Hora/Desenvolvedor** | R$ 46,00 | (52 + 40) ÷ 2 |
+| **Número de Desenvolvedores** | 3 | Equipe ideal |
+| **Custo Total Desenvolvimento** | **R$ 182.736,00** | 3.976h × R$ 46,00 |
+
+### Estrutura de Custos Completa
+
+| Descrição | Valor |
+|-----------|-------|
+| Custo Desenvolvimento | R$ 182.736,00 |
+| Rateio Custos Fixos (10%) | R$ 18.273,60 |
+| Rateio Custos Variáveis (5%) | R$ 9.136,80 |
+| **Subtotal** | **R$ 210.146,40** |
+| Margem de Lucro (20%) | R$ 42.029,28 |
+| **Total Proposta** | **R$ 252.175,68** |
+
+---
+
+## 📅 Cronograma e Parcelamento
+
+### Duração do Projeto
+- **Total horas**: 3.976 horas
+- **Horas/mês por desenvolvedor**: 160 horas (8h/dia × 20 dias)
+- **Total horas/mês (3 devs)**: 480 horas
+- **Duração estimada**: 3.976 ÷ 480 = 8,3 meses ≈ 9 meses
+
+### Proposta Comercial
+
+| Item | Valor | Observações |
+|------|-------|-------------|
+| **Valor Total do Projeto** | R$ 252.175,68 | |
+| **Prazo de Entrega** | 9 meses | |
+| **Entrada (30%)** | R$ 75.652,70 | Assinatura do contrato |
+| **Parcela 2 (30%)** | R$ 75.652,70 | 3º mês |
+| **Parcela 3 (20%)** | R$ 50.435,14 | 6º mês |
+| **Parcela 4 (20%)** | R$ 50.435,14 | Entrega do projeto |
+
+### Manutenção Pós-Implantação
+
+| Período | Valor Mensal | Valor Total |
+|---------|--------------|-------------|
+| **1º Ano** | R$ 10.508,98 | R$ 126.107,76 |
+| **2º Ano** | R$ 10.508,98 | R$ 126.107,76 |
+
+---
+
+## 🎯 Considerações Importantes
+
+### Premissas Adotadas
+- Taxa de 20 horas por UCP (média conservadora)
+- Equipe de 3 desenvolvedores em tempo integral
+- Requisitos estáveis durante o desenvolvimento
+- Ambiente de desenvolvimento padrão
+
+### Riscos Identificados
+1. **Complexidade técnica**: Sistema híbrido (offline/online)
+2. **Integrações externas**: Órgãos governamentais
+3. **Usuários finais**: Baixa familiaridade tecnológica
+4. **Conectividade**: Operação em áreas rurais
+
+### Recomendações
+- Fase de prototipagem inicial com usuários reais
+- Testes em campo desde as fases iniciais
+- Planejamento de contingência para integrações
+- Treinamento específico para usuários finais
+
+---
+
+**Última atualização**: 25/11/2025  
+**Elaborado por**: Equipe de Análise VETRA  
+**Versão**: 1.0
